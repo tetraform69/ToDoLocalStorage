@@ -41,7 +41,7 @@ function viewTareas() {
             <h3>${t.titulo}</h3>
             <p>${t.descripcion}</p>
             <div style="display: flex;">
-                <input type="checkbox" ${t.estado ? "checked" : ""}  onchange="canDelete('${t.id}')">
+                <input type="checkbox" ${t.estado ? "checked" : ""} class="mycheck" onchange="canDelete('${t.id}')">
                 <p>Completada</p>
             </div>
             <button ${!t.estado ? "disabled" : ""} id="${t.id}" onclick="deleted('${t.id}')">Eliminar</button>
@@ -65,7 +65,7 @@ function canDelete(id){
 
     tareas.forEach(t => {
         if(t.id == id){
-            t.estado = !button.disabled
+            t.estado = button.disabled
         }
     });
 

@@ -1,5 +1,9 @@
-body{
+* {
+    box-sizing: border-box;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
     margin: 0;
     padding: 0;
     display: flex;
@@ -7,15 +11,24 @@ body{
     align-items: center;
 }
 
-.form, #tareas{
+#tareas,
+.form {
     width: 90%;
+}
+
+.tarea,
+.form {
+    margin-top: 5px;
     background: rgb(236, 236, 236);
-    margin-top: 50px;
     padding: 10px;
     border-radius: 5px;
 }
 
-button{
+.form {
+    margin-top: 50px;
+}
+
+button {
     width: 100px;
     height: 30px;
     border: solid gray 1px;
@@ -23,15 +36,72 @@ button{
     background: whitesmoke;
 }
 
-button:hover{
+button:hover {
     background: rgb(190, 190, 190);
     cursor: pointer;
 }
 
-button:disabled{
+button:disabled {
     cursor: auto;
 }
 
-button:disabled:hover{
+button:disabled:hover {
     background: whitesmoke;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+label {
+    width: 80%;
+}
+
+h1 {
+    text-align: center;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.form-input input,
+textarea {
+    vertical-align: middle;
+    padding: 5px;
+    font-size: 16px;
+    width: 80%;
+    border-radius: 5px;
+    border: inset black 0.5px;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mycheck {
+    border: solid black 0.5px;
+    border-radius: 5px;
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    background: rgb(255, 255, 255);
+}
+
+.mycheck:checked {
+    background: rgb(0, 162, 255);
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+}
+
+input:focus {
+    background: #0000000c;
+}
+
+textarea:focus{
+    background: #0000000c;
 }
